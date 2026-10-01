@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account - CareerX</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+
+        <div class="login-logo">
+            Career<span>X</span>
+        </div>
+
+        <h1>Create Your Account 🚀</h1>
+
+        <p class="login-subtitle">
+            Build your skill-based professional profile.
+        </p>
+
+        <form id="signupForm">
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                required
+            >
+
+            <label>What are you looking for?</label>
+
+            <select id="accountType" required>
+                <option value="">Select an option</option>
+                <option value="job">I'm looking for a Job</option>
+                <option value="recruiter">I'm hiring</option>
+            </select>
+
+            <button type="submit" class="login-main-btn">
+                Create Account
+            </button>
+
+        </form>
+
+        <p class="create-account">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+        <a href="index.html" class="back-home">
+            ← Back to CareerX
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

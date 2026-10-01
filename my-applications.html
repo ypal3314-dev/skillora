@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Applications - Skillora</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>ora</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Find Jobs</a>
+            <a href="my-applications.html">My Applications</a>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <button class="signup-btn">Join Skillora</button>
+        </div>
+
+    </nav>
+
+
+    <section class="jobs-page">
+
+        <h1>My Applications 📋</h1>
+
+        <p>Track the jobs you have applied for.</p>
+
+        <div id="applicationsContainer"></div>
+
+    </section>
+
+
+    <script>
+
+        const applications =
+            JSON.parse(localStorage.getItem("skilloraApplications")) || [];
+
+        const container =
+            document.getElementById("applicationsContainer");
+
+
+        if (applications.length === 0) {
+
+            container.innerHTML = `
+                <div class="job-card">
+                    <h2>No Applications Yet</h2>
+                    <p>You haven't applied for any jobs yet.</p>
+                    <a href="jobs.html">
+                        <button>Find Jobs</button>
+                    </a>
+                </div>
+            `;
+
+        } else {
+
+            applications.forEach(function(app) {
+
+                container.innerHTML += `
+
+                    <div class="job-card">
+
+                        <h2>${app.job}</h2>
+
+                        <p>
+                            <strong>Name:</strong> ${app.name}
+                        </p>
+
+                        <p>
+                            <strong>Email:</strong> ${app.email}
+                        </p>
+
+                        <p>
+                            <strong>Phone:</strong> ${app.phone}
+                        </p>
+
+                        <p>
+                            <strong>Skills:</strong> ${app.skills}
+                        </p>
+<select onchange="updateApplicationStatus(${applications.indexOf(app)}, this.value)"
+    style="
+        padding:8px;
+        margin-top:10px;
+        border-radius:6px;
+        border:1px solid #ccc;
+    ">
+
+    <option value="Applied"
+        ${(!app.status || app.status === "Applied") ? "selected" : ""}>
+        🟡 Applied
+    </option>
+
+    <option value="Under Review"
+        ${app.status === "Under Review" ? "selected" : ""}>
+        🔵 Under Review
+    </option>
+
+    <option value="Shortlisted"
+        ${app.status === "Shortlisted" ? "selected" : ""}>
+        🟢 Shortlisted
+    </option>
+
+    <option value="Rejected"
+        ${app.status === "Rejected" ? "selected" : ""}>
+        🔴 Rejected
+    </option>
+
+</select>
+
+                    </div>
+
+                `;
+
+            });
+
+        }
+        function updateApplicationStatus(index, status) {
+
+    let applications =
+        JSON.parse(localStorage.getItem("skilloraApplications")) || [];
+
+    applications[index].status = status;
+
+    localStorage.setItem(
+        "skilloraApplications",
+        JSON.stringify(applications)
+    );
+
+    alert("Application status updated! ✅");
+}
+    </script>
+
+</body>
+</html>

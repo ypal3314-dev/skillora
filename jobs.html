@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Jobs - Skillora</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>ora</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Find Jobs</a>
+            <a href="my-applications.html">My Applications</a>
+            <a href="#">Challenges</a>
+            <a href="#">Projects</a>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <button class="signup-btn">Join Skillora</button>
+        </div>
+
+    </nav>
+
+    <section class="jobs-page">
+        <style>
+.job-card {
+    transition: 0.3s;
+    position: relative;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.job-card h2 {
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    color: #666;
+}
+
+.job-card span {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 6px 12px;
+    background: #eee;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.job-card button {
+    margin-top: 8px;
+}
+</style>
+
+        <h1>Find Your Opportunity 🚀</h1>
+
+        <p>
+            Search jobs based on your skills and interests.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="jobSearch"
+                placeholder="Search jobs or skills..."
+            >
+            <script>
+document.getElementById("jobSearch").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        searchJobs();
+    }
+});
+</script>
+
+            <button onclick="searchJobs()">
+                Search
+            </button>
+
+        </div>
+
+        <div class="jobs-container">
+
+            <div class="job-card">
+
+                <h2>Frontend Developer</h2>
+                <button onclick="openJob('Frontend Developer')">View Job</button>
+
+                <p>HTML • CSS • JavaScript</p>
+
+                <span>Remote</span>
+                <button onclick="openJob('Frontend Developer')">View Job</button>
+
+            </div>
+
+            <div class="job-card">
+
+                <h2>C++ Developer</h2>
+
+                <p>C++ • DSA • Problem Solving</p>
+
+                <span>Remote</span>
+    <button onclick="openJob('C++ Developer')">View Job</button>
+
+            </div>
+
+            <div class="job-card">
+
+                <h2>Data Science Intern</h2>
+
+                <p>Python • Data Analysis • Machine Learning</p>
+
+                <span>Hybrid</span>
+
+                <button onclick="openJob('Data Science Intern')">View Job</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

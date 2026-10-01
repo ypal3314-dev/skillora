@@ -1,0 +1,268 @@
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skillora - Prove Your Skills</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>ora</span>
+        </div>
+        <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Find Jobs</a>
+    <a href="my-applications.html">My Applications</a>
+   <a href="challenges.html">Challenges</a>
+    <a href="#">Projects</a>
+</div>
+
+       <div class="nav-buttons" id="navButtons">
+    <a href="login.html" class="login-btn">Login</a>
+    <a href="signup.html" class="signup-btn">Join Skillora</a>
+</div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+
+    <div class="badge">
+
+                🚀 Don't just show your resume. Prove your skills.
+            </div>
+
+            <h1>
+                Your Skills.
+                <span>Your Proof.</span>
+                Your Opportunity.
+            </h1>
+
+            <p>
+                Skillora connects skilled people with real opportunities
+                through skills, projects and challenges — not just resumes.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search jobs, skills or projects..."
+                >
+
+                <button onclick="searchJobs()">
+                    Search
+                </button>
+
+            </div>
+
+            <div class="quick-links">
+
+                <span>Popular:</span>
+
+                <button>Web Development</button>
+                <button>C++</button>
+                <button>Data Science</button>
+                <button>Digital Marketing</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Skill Card -->
+        <div class="skill-card">
+
+            <div class="card-top">
+               <div class="profile-circle" id="profileInitial">
+    R
+</div>
+                <div>
+                  <h3 id="profileName">Skill Profile</h3>
+<p id="profileEducation">Verified Candidate</p>
+                </div>
+
+                <span class="verified">✓</span>
+            </div>
+
+
+            <div class="skill-score">
+
+                <div>
+                    <p>Overall Skill Score</p>
+                    <h2>86%</h2>
+                </div>
+
+                <div class="circle">
+                    86
+                </div>
+
+            </div>
+
+
+            <div class="skills">
+
+      <div class="skills" id="profileSkills">
+
+    <div class="skill">
+        <span>C++</span>
+        <div class="bar">
+            <div style="width: 90%;"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>DSA</span>
+        <div class="bar">
+            <div style="width: 78%;"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>Web Development</span>
+        <div class="bar">
+            <div style="width: 82%;"></div>
+        </div>
+    </div>
+
+</div>
+
+
+            <button class="challenge-btn">
+                🏆 Take a Skill Challenge
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Popular Job Categories -->
+
+<section class="categories">
+
+    <div class="section-title">
+        <p>EXPLORE OPPORTUNITIES</p>
+
+        <h2>Popular Job Categories</h2>
+
+        <span>
+            Find opportunities based on your skills and interests.
+        </span>
+    </div>
+
+    <div class="category-container">
+
+        <div class="category-card">
+            <div class="category-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>HTML • CSS • JavaScript</p>
+            <a href="jobs.html">Explore Jobs →</a>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">⚙️</div>
+            <h3>C++ & DSA</h3>
+            <p>C++ • DSA • Problem Solving</p>
+            <a href="jobs.html">Explore Jobs →</a>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">📊</div>
+            <h3>Data Science</h3>
+            <p>Python • Data • Machine Learning</p>
+            <a href="jobs.html">Explore Jobs →</a>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">📱</div>
+            <h3>Digital Marketing</h3>
+            <p>SEO • Social Media • Marketing</p>
+            <a href="jobs.html">Explore Jobs →</a>
+        </div>
+
+    </div>
+
+</section>
+    <!-- Features -->
+    <section class="features">
+
+        <div class="section-title">
+            <p>WHY SKILLORA?</p>
+
+            <h2>
+                Skills speak louder than resumes.
+            </h2>
+        </div>
+
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <div class="icon">🎯</div>
+
+                <h3>Skill Match</h3>
+
+                <p>
+                    Discover jobs that match your actual skills
+                    and see exactly what you need to improve.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="icon">🏆</div>
+
+                <h3>Skill Challenges</h3>
+
+                <p>
+                    Prove what you can actually do through
+                    real-world challenges.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="icon">🚀</div>
+
+                <h3>Project Proof</h3>
+
+                <p>
+                    Showcase your projects and let recruiters
+                    see your real work.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Skill<span>ora</span>
+        </div>
+
+        <p>
+            Prove your skills. Find your opportunity.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
